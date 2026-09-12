@@ -41,7 +41,7 @@ body {
   height: 82px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-    url('tiremarkBanner.png') center  / cover no-repeat;
+    url('/images/tiremarkBanner.png') center  / cover no-repeat;
   border-bottom: 3px solid rgba(116, 26, 26, 0.986);
   display: flex;
   align-items: center;
@@ -128,7 +128,7 @@ body {
   min-height: 640px;
   background:
     linear-gradient(rgba(12, 40, 63, 0.12), rgba(12, 40, 63, 0.12)),
-    url('cloudyMountain.jpg') center/cover no-repeat;
+    url('images/cloudyMountain.jpg') center/cover no-repeat;
   padding: 24px 18px 0;
   overflow: hidden;
 }
@@ -226,7 +226,7 @@ body {
   margin: -24px 0 0;
   background:
     linear-gradient(rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)),
-    url('tireMarks.jpg') center/cover no-repeat;
+    url('images/tireMarks.jpg') center/cover no-repeat;
   border-top: 3px solid rgba(255,255,255,0.08);
   padding: 28px 18px 30px;
   z-index: 1;
@@ -309,6 +309,121 @@ body {
   cursor: pointer;
   box-shadow: 0 8px 18px rgba(0,0,0,0.18);
   margin-top: 6px;
+}
+
+.page-subpage {
+  background: #171717;
+}
+
+.subpage-main {
+  padding-bottom: 40px;
+}
+
+.page-hero {
+  background:
+    linear-gradient(rgba(15, 32, 46, 0.54), rgba(15, 32, 46, 0.54)),
+    url('images/cloudyMountain.jpg') center/cover no-repeat;
+  padding: 36px 18px 26px;
+  border-bottom: 3px solid rgba(166, 12, 12, 0.7);
+}
+
+.page-hero-copy {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #dfeef9;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 3.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+  color: #fff;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.content-section {
+  width: min(90%, 360px);
+  margin: 22px auto 0;
+  background: rgba(38, 38, 38, 0.92);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 18px 16px;
+  box-shadow: 0 12px 22px rgba(0,0,0,0.16);
+}
+
+.intro-card p {
+  margin: 0 0 16px;
+  color: #ececec;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 14px;
+  background: rgba(90, 90, 90, 0.42);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.stat-item strong {
+  color: #f8f8f8;
+  font-size: 1.15rem;
+}
+
+.stat-item span {
+  color: #d7d7d7;
+  line-height: 1.5;
+}
+
+.feature-box h2,
+.cta-band h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.feature-box ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #edf3f8;
+  line-height: 1.8;
+}
+
+.cta-band {
+  text-align: center;
+}
+
+.cta.secondary {
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 14px 22px;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 390px) {
