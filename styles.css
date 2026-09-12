@@ -1,0 +1,327 @@
+:root {
+  --red-1: #a60c0c;
+  --red-2: #d51d1d;
+  --dark: #1f1f1f;
+  --panel: #2d2d2d;
+  --field: #d7d7d7;
+  --ink: #f2f2f2;
+  --sky-1: #5ca4d8;
+  --sky-2: #98d3f4;
+  --sky-3: #d9ebf5;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: var(--ink);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #111;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+.topbar {
+  position: relative;
+  height: 82px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url('tiremarksBanner.png') center  / cover no-repeat;
+  border-bottom: 3px solid rgba(116, 26, 26, 0.986);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 18px;
+}
+
+.topbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.04), rgba(0,0,0,0.12));
+  pointer-events: none;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: #111;
+  border: 8px solid rgba(220, 220, 220, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.28);
+  margin-top: 18px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 110%;
+  display: block;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 999px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(14, 14, 14, 0.96);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-weight: 700;
+}
+
+.hero {
+  position: relative;
+  min-height: 640px;
+  background:
+    linear-gradient(rgba(12, 40, 63, 0.12), rgba(12, 40, 63, 0.12)),
+    url('cloudyMountain.jpg') center/cover no-repeat;
+  padding: 24px 18px 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.headline {
+  margin: 0;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+  color: rgba(255,255,255,0.96);
+  text-shadow: 0 4px 8px rgba(0,0,0,0.14);
+  max-width: 390px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.subhead {
+  margin: 26px auto 0;
+  font-size: clamp(1.1rem, 3.3vw, 1.55rem);
+  line-height: 1.25;
+  font-weight: 500;
+  max-width: 360px;
+  color: rgba(255,255,255,0.96);
+  text-align: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px auto 24px;
+  background: linear-gradient(180deg, #3a0707, #c00000);
+  border: none;
+  border-radius: 999px;
+  padding: 16px 26px 18px;
+  color: #fff;
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.cta .phone {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: transparent;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-top-color: transparent;
+  transform: rotate(-12deg);
+}
+
+.cta .phone::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cta .phone::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-left: 0;
+  border-radius: 12px;
+  left: 2px;
+  top: 2px;
+  transform: rotate(45deg);
+}
+
+.form-panel {
+  position: relative;
+  width: 100%;
+  margin: -24px 0 0;
+  background:
+    linear-gradient(rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)),
+    url('tireMarks.jpg') center/cover no-repeat;
+  border-top: 3px solid rgba(255,255,255,0.08);
+  padding: 28px 18px 30px;
+  z-index: 1;
+}
+
+.form-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.2));
+  z-index: 0;
+}
+
+.form-panel .panel-card {
+  position: relative;
+  z-index: 1;
+  width: min(92%, 360px);
+  margin: 0 auto;
+  background: rgba(64, 64, 64, 0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  box-shadow: 0 18px 32px rgba(0,0,0,0.28);
+  padding: 18px 16px 20px;
+}
+
+.form-panel h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 18px;
+  font-size: clamp(2.05rem, 7vw, 3.25rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+  color: #f3f3f3;
+  text-align: center;
+}
+
+.form-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 12px;
+}
+
+.field {
+  background: rgba(219, 219, 219, 0.84);
+  border: none;
+  border-radius: 8px;
+  min-height: 52px;
+  width: 100%;
+  padding: 14px 14px;
+  font-size: 1rem;
+  color: #1d1d1d;
+  outline: none;
+}
+
+.field::placeholder {
+  color: rgba(26, 26, 26, 0.8);
+  font-weight: 500;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.submit-btn {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #d81717, #be0e0e);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  margin-top: 6px;
+}
+
+@media (max-width: 390px) {
+  .brand {
+    width: 95px;
+    height: 95px;
+  }
+
+  .brand h1 {
+    font-size: 32px;
+  }
+
+  .hero {
+    min-height: 610px;
+  }
+}
