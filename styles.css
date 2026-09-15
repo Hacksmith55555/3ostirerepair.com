@@ -60,7 +60,7 @@ body {
 
 .brand {
   position: relative;
-  z-index: 1;
+  z-index: 11;
   width: 108px;
   height: 108px;
   border-radius: 50%;
@@ -112,7 +112,10 @@ body {
 }
 
 .mobile-menu.open {
+  position: absolute;
   display: flex;
+  z-index: 10;
+  width: 100%;
 }
 
 .mobile-menu a {
@@ -129,7 +132,7 @@ body {
   background:
     linear-gradient(rgba(12, 40, 63, 0.12), rgba(12, 40, 63, 0.12)),
     url('images/cloudyMountain.jpg') center/cover no-repeat;
-  padding: 24px 18px 0;
+    padding-top: 130px;
   overflow: hidden;
 }
 
